@@ -216,18 +216,18 @@ _
 
 ### `support_tables\SVDBS_SVVESSEL.csv`
 
-**Description:** TODO – add dataset description.
+**Description:** Vessels, their abbreviation or coding, and a description if available.
 
 | Column | Type | Missing % | # Unique | Example | Description |
 |--------|------|-----------|----------|---------|-------------|
-| `vessel_name` | object | 0.0 | 287 | `ABEL-J` | TODO |
-| `vessel_abbrev` | object | 0.3 | 286 | `AJ` | TODO |
-| `country_of_origin` | object | 93.0 | 3 | `USA` | TODO |
-| `home_port` | object | 93.4 | 17 | `Woods Hole, MA` | TODO |
-| `agency_name` | object | 97.2 | 8 | `NMFS-NEFSC` | TODO |
-| `length_overall_ft` | float64 | 95.8 | 12 | `176.0` | TODO |
-| `construction` | object | 97.9 | 3 | `FIBERGLASS` | TODO |
-| `year_built` | object | 96.9 | 8 | `1963` | TODO |
+| `vessel_name` | object | 0.0 | 287 | `ABEL-J` | N/A |
+| `vessel_abbrev` | object | 0.3 | 286 | `AJ` | N/A|
+| `country_of_origin` | object | 93.0 | 3 | `USA` | N/A |
+| `home_port` | object | 93.4 | 17 | `Woods Hole, MA` | N/A |
+| `agency_name` | object | 97.2 | 8 | `NMFS-NEFSC` | N/A |
+| `length_overall_ft` | float64 | 95.8 | 12 | `176.0` | N/A |
+| `construction` | object | 97.9 | 3 | `FIBERGLASS` | N/A|
+| `year_built` | object | 96.9 | 8 | `1963` | N/A |
 
 ---
 
