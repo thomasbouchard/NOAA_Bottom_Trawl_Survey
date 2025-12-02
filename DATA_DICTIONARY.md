@@ -20,18 +20,18 @@ This dictionary provides variable definitions, data structures, and lookup table
 |------|-------------|
 | `22561_SVDBS_CRUISES.csv` | Cruise-level metadata for NEFSC bottom trawl surveys. |
 | `22561_UNION_FSCS_SVBIO.csv` | Joined FSCS/SVDBS biological observations at tow/species level. |
-| `22561_UNION_FSCS_SVCAT.csv` | Catch category / summary weights by tow. |
+| `22561_UNION_FSCS_SVCAT.csv` | Catch number and weight of each species by tow. |
 | `22561_UNION_FSCS_SVLEN.csv` | Length-frequency measurements by tow and species. |
 | `22561_UNION_FSCS_SVSTA.csv` | Tow / station-level effort and environmental data. |
-| `support_tables\SVDBS_CLOUD.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_MATURITY_CODES.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_SEX_CODES.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_SVGEAR.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_SVMSTRATA.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_SVSPECIES_LIST.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_SVVESSEL.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_WEATHER.csv` | TODO – add dataset description. |
-| `support_tables\SVDBS_XBT.csv` | TODO – add dataset description. |
+| `support_tables\SVDBS_CLOUD.csv` | Cloud Coverage Coding % Clear - 0-9. |
+| `support_tables\SVDBS_MATURITY_CODES.csv` | Maturity Coding - D,E,I,R,S,T,U,X. |
+| `support_tables\SVDBS_SEX_CODES.csv` | Sex Coding - 0-2, 0-5 for American Lobster, 0-7 for Northern Shrimp. |
+| `support_tables\SVDBS_SVGEAR.csv` | Survey Gear Coding - description of gear used. |
+| `support_tables\SVDBS_SVMSTRATA.csv` | Defines spacial strata used including location, description, and number of tows. |
+| `support_tables\SVDBS_SVSPECIES_LIST.csv` | Species Coding including Sci. Name, Common Name, and SVSPP. |
+| `support_tables\SVDBS_SVVESSEL.csv` | Vessel's and their abbreviations - occassional vessel info. |
+| `support_tables\SVDBS_WEATHER.csv` | Weather Coding 0-9, 99. |
+| `support_tables\SVDBS_XBT.csv` | XBT 'Instrument Used' Coding (Expendable BathyThermograph). |
 
 
 ## Dataset-Level Dictionaries
@@ -86,19 +86,19 @@ This dictionary provides variable definitions, data structures, and lookup table
 
 | Column | Type | Missing % | # Unique | Example | Description |
 |--------|------|-----------|----------|---------|-------------|
-| `CRUISE6` | int64 | 0.0 | 45 | `196803` | TODO |
-| `CRUISE` | int64 | 0.0 | 63 | `6803` | TODO |
-| `STRATUM` | int64 | 0.0 | 154 | `1050` | TODO |
-| `TOW` | int64 | 0.0 | 38 | `3` | TODO |
-| `STATION` | int64 | 0.0 | 661 | `1` | TODO |
-| `STATUS_CODE` | int64 | 0.0 | 1 | `10` | TODO |
-| `ID` | int64 | 0.0 | 15596 | `196803010500030001` | TODO |
-| `SVSPP` | int64 | 0.0 | 501 | `23` | TODO |
-| `CATCHSEX` | int64 | 0.0 | 6 | `0` | TODO |
+| `CRUISE6` | int64 | 0.0 | 45 | `196803` | Cruise Identifier |
+| `CRUISE` | int64 | 0.0 | 63 | `6803` | Cruise Identifier |
+| `STRATUM` | int64 | 0.0 | 154 | `1050` | Spatial Stratum assoc. with the tow -- Keys to SVDBS_SVMSTRATA |
+| `TOW` | int64 | 0.0 | 38 | `3` | Tow ID within that stratum |
+| `STATION` | int64 | 0.0 | 661 | `1` | Location within a stratum where 1 tow attempt occurs |
+| `STATUS_CODE` | int64 | 0.0 | 1 | `10` | Status of tow - valid, partial, aborted, failed |
+| `ID` | int64 | 0.0 | 15596 | `196803010500030001` | ID for catch created from CRUISE6,CRUISE,STRATUM,TOW,STATION |
+| `SVSPP` | int64 | 0.0 | 501 | `23` | Species identifier -- Keys to SVDBS_SVSPECIES_LIST  |
+| `CATCHSEX` | int64 | 0.0 | 6 | `0` | Sex of catch |
 | `EXPCATCHNUM` | float64 | 0.8 | 2323 | `8.0` | TODO |
 | `EXPCATCHWT` | float64 | 0.0 | 11338 | `20.0` | TODO |
-| `SCIENTIFIC_NAME` | object | 0.0 | 503 | `Leucoraja ocellata (winter skate)` | TODO |
-| `CATCH_COMMENT` | object | 29.4 | 946 | ` ` | TODO |
+| `SCIENTIFIC_NAME` | object | 0.0 | 503 | `Leucoraja ocellata (winter skate)` | Scientific name of catch |
+| `CATCH_COMMENT` | object | 29.4 | 946 | ` ` | Comments related to catch |
 
 ---
 
