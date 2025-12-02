@@ -16,8 +16,6 @@ This dictionary provides variable definitions, data structures, and lookup table
 
 ## Dataset Index
 
-## Dataset Index
-
 | File | Description |
 |------|-------------|
 | `22561_SVDBS_CRUISES.csv` | Cruise-level metadata for NEFSC bottom trawl surveys. |
