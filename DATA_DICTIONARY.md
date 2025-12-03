@@ -235,10 +235,10 @@ _
 
 **Description:** TODO – add dataset description.
 
-| Column | Type | Missing % | # Unique | Example | Description |
-|--------|------|-----------|----------|---------|-------------|
-| `weather` | int64 | 0.0 | 11 | `0` | TODO |
-| `weather_def` | object | 0.0 | 11 | `Clear (No clouds at any level)` | TODO |
+| Column | Description |
+|--------|-------------|
+| `cloud` | Integer code representing a percentage of coud cover |
+| `pctclear` | Approximate percentage of the sky that is clear for each cloud code (0-100) |
 | `doe` | float64 | 100.0 | 0 | `None` | TODO |
 | `doc` | float64 | 100.0 | 0 | `None` | TODO |
 | `uoe` | float64 | 100.0 | 0 | `None` | TODO |
